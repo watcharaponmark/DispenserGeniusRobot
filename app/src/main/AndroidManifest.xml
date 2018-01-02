@@ -26,7 +26,7 @@
         <activity android:name=".menu.DiarrheaActivity" />
         <activity android:name=".menu.PainkillerActivity" />
         <activity android:name=".menu.TravelSicknessTabletsActivity" />
-        <activity android:name=".menu.AntihistamineActivity"></activity>
+        <activity android:name=".menu.AntihistamineActivity" />
     </application>
 
 </manifest>

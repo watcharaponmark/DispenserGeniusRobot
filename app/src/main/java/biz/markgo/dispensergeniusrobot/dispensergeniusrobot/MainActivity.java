@@ -1,6 +1,7 @@
 package biz.markgo.dispensergeniusrobot.dispensergeniusrobot;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bt_drug2;
     private Button bt_drug3;
     private Button bt_drug4;
+    private Button bt_settime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         bt_drug2 = (Button) findViewById(R.id.bt_drug2);
         bt_drug3 = (Button) findViewById(R.id.bt_drug3);
         bt_drug4 = (Button) findViewById(R.id.bt_drug4);
+        bt_settime = (Button) findViewById(R.id.bt_settime);
 
 //#####################################################################################
         bt_drug1.setOnClickListener(new View.OnClickListener() {
@@ -86,6 +89,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, DiarrheaActivity.class);
                 startActivity(intent);
 
+            }
+        });
+//#####################################################################################
+
+        bt_settime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://nrprobot.marktests.com"));
+                startActivity(browserIntent);
             }
         });
 //#####################################################################################

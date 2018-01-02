@@ -52,18 +52,14 @@ public class TravelSicknessTabletsActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String key = "efCJyJt41Uf6iKOCufxQPYhAhP8pBsNYLPdbK2x1";
-                String Thing = "NodeMCU_Servo";
-                String Channel = "Servo3";
+                String Thing = "NodeMCU_relay";
+                String Channel = "relay1";
                 String Value = "1";
 
                 Log.e(TAG,"bt_drug2 : servo3-1");
                 HttpGetRequest_NodeMCU_Servo httpGetRequest_nodeMCU_servo =new HttpGetRequest_NodeMCU_Servo("1");
                 httpGetRequest_nodeMCU_servo.execute(key,Thing,Channel,Value);
 
-                Value = "0";
-                HttpGetRequest_NodeMCU_Servo httpGetRequest_nodeMCU_servo_0 =new HttpGetRequest_NodeMCU_Servo("0");
-                httpGetRequest_nodeMCU_servo_0.execute(key,Thing,Channel,Value);
-                Log.e(TAG,"bt_drug1 : servo3-0");
 
             }
         });
